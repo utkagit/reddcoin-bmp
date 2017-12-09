@@ -1,0 +1,16 @@
+version: '3'
+services:
+  reddcoin-core:
+    image: reddcoin-bmp-update
+    volumes:
+    - ./redd-data-dir/:/root/.reddcoin/
+    networks:
+     net1:
+       aliases:
+        - alias2
+    ports:
+     - 0.0.0.0:45444:45444
+     - 0.0.0.0:45443:45443
+
+networks:
+  net1:

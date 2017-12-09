@@ -17,7 +17,7 @@ https://docs.docker.com/compose/install/
 
 // Build reddcoin-core image:
 
-docker build -t reddcoin-core -f Dockerfile-reddcore .
+docker build -t reddcoin-bmp-update -f Dockerfile-reddcore .
 
 
 # step 3
