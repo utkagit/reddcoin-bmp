@@ -13,20 +13,15 @@ Docker compose:
 
 https://docs.docker.com/compose/install/
 
-# Step 2
 
-// Build reddcoin-core image:
-
-docker build -t reddcoin-bmp-update -f Dockerfile-reddcore .
-
-
-# step 3
+# step 2
 
 Make sure that all the needed ports are opened on your linux machine and on your external firewall/router/ACL
 
-# step 5
+# step 3
 
 // Run the Reddcoin-core 
+// It will take some time in the first run because it'll need to BUILD the images
 
 docker-compose up
 
