@@ -34,6 +34,14 @@ docker-compose stop
 
 ctrk+z      // to exit if it's running on the foreground
 
+// running the docker container in the background:
+
+docker-compose up -d
+
+// checking to see if the docker container is running
+
+docker-compose ps
+
 # step 4 - optional
 
 // in case you made any changes to docker-compose.yml it would be better if you'll use the 'rm' flag before you run it again
