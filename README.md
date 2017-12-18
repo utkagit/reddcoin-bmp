@@ -22,16 +22,19 @@ Make sure that all the needed ports are opened on your linux machine and on your
 
 // Run the Reddcoin-core 
 // It will take some time in the first run because it'll need to BUILD the images
+// we will use the 'up' flag alone, on the first run... this way you could see the build progress
 
-docker-compose up
+docker-compose up 
 
 // to stop the containers:
 
 docker-compose stop
 
-// in case you made any changes to docker-compose.yml it would be better if you'll use the 'rm' flag before you run it again
+-or-
 
-docker-compose rm
+ctrk+z      // to exit if it's running on the foreground
+
+
 
 # NOTES - READ IT :
 
@@ -45,6 +48,10 @@ To go around it you'll have to create a swap file
 
 You can clone https://github.com/utkagit/reddcoin-data to get a more or less up to date blockchain and copy the files to ./redd-data-dir
 It might not be the best thing to do, so don't do it if your machine can handle the load when reddcoin-core is syncing with the blockchain
+
+// in case you made any changes to docker-compose.yml it would be better if you'll use the 'rm' flag before you run it again
+
+docker-compose rm
 
 # Getting inside the container if needed :
 
