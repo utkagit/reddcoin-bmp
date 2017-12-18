@@ -11,7 +11,7 @@ RUN sudo apt-get update && sudo apt-get install git -y \
 
 RUN mkdir /git && cd /git && sudo git clone https://github.com/bmp02050/ReddcoinUpdates.git Reddcoin && sudo chmod 777 * -R
 
-RUN echo "cd /git/Reddcoin/" > /git/ReddcoinUpdates/compile.sh && echo "./autogen.sh" >>  /git/Reddcoin/compile.sh \
+RUN echo "cd /git/Reddcoin/" > /git/Reddcoin/compile.sh && echo "./autogen.sh" >>  /git/Reddcoin/compile.sh \
 && echo "./configure" >> /git/Reddcoin/compile.sh \
 && echo "make install" >> /git/Reddcoin/compile.sh \
 && sudo chmod o+x /git/Reddcoin/compile.sh
