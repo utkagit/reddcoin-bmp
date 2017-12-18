@@ -34,6 +34,25 @@ docker-compose stop
 
 ctrk+z      // to exit if it's running on the foreground
 
+# step 4 - optional
+
+// in case you made any changes to docker-compose.yml it would be better if you'll use the 'rm' flag before you run it again
+
+docker-compose rm
+
+# issuing a reddcoin-core command without entering the container:
+
+docker exec -it reddcoin-core /usr/local/bin/reddcoind getinfo
+
+docker exec -it reddcoin-core /usr/local/bin/reddcoind getbalance
+
+and so on... just add the flag after /usr/local/bin/reddcoind
+
+# Getting inside the container if needed :
+
+docker exec -it reddcoin-core /bin/bash
+
+//You'll find youself inside of the container - just remember that PID 1 - which means that the container will exit the moment you stop the reddcoin service
 
 
 # NOTES - READ IT :
@@ -49,19 +68,3 @@ To go around it you'll have to create a swap file
 You can clone https://github.com/utkagit/reddcoin-data to get a more or less up to date blockchain and copy the files to ./redd-data-dir
 It might not be the best thing to do, so don't do it if your machine can handle the load when reddcoin-core is syncing with the blockchain
 
-// in case you made any changes to docker-compose.yml it would be better if you'll use the 'rm' flag before you run it again
-
-docker-compose rm
-
-# Getting inside the container if needed :
-
-//first run the command:
-
-docker ps          
-
-//will show you the running docker containers - the first thing "f14fd4gf564x" (exmaple) is the container id
-//using this output, run the command:
-
-docker exec -it f14fd4gf564x /bin/bash
-
-//You'll find youself inside of the container - just remember that PID 1 - which means that the container will exit the moment you stop the reddcoin service
