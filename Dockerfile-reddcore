@@ -22,8 +22,6 @@ RUN cat /git/Reddcoin/compile.sh
 
 RUN /usr/local/bin/reddcoind || :
 
-#COPY reddcoin.conf /root/.reddcoin/reddcoin.conf
-
 EXPOSE 45444
 EXPOSE 45443
 
