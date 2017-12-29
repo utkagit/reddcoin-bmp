@@ -17,6 +17,8 @@ https://docs.docker.com/compose/install/
 Make sure that all the needed ports are opened on your linux machine and on your external firewall/router/ACL
 
 # step 3
+// the first run will take the most time because it will have to compile the wallet
+
 //to run it in the foreground:
 docker-compose up   
 
