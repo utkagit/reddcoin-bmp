@@ -4,7 +4,7 @@ services:
     container_name: reddcoin-core
     build:
       context: ./
-      dockerfile: Dockerfile-reddcore1
+      dockerfile: Dockerfile-reddcore
     volumes:
     - ./redd-data-dir/:/root/.reddcoin/
     networks:
