@@ -10,7 +10,7 @@ services:
     networks:
      net1:
        aliases:
-        - alias2
+        - network1
     ports:
      - 0.0.0.0:45444:45444
      - 0.0.0.0:45443:45443
