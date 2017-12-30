@@ -18,8 +18,6 @@ RUN echo "cd /git/Reddcoin/" > /git/Reddcoin/compile.sh && echo "./autogen.sh" >
 
 RUN /git/Reddcoin/compile.sh
 
-RUN cat /git/Reddcoin/compile.sh
-
 RUN /usr/local/bin/reddcoind || :
 
 EXPOSE 45444
